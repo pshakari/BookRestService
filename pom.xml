@@ -3,7 +3,7 @@
     <groupId>no.shakari.rest</groupId>
     <artifactId>BookRestService</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <name>BookRestService Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
@@ -117,5 +117,35 @@
         <url>scm:git:git@github.com:pshakari/BookRestService.git</url>
         <developerConnection>scm:git:git@github.com:pshakari/BookRestService.git</developerConnection>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>inmeta-releases</id>
+            <url>https://maven.inmeta.com/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>inmeta-snapshots</id>
+            <url>https://maven.inmeta.com/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>inmeta-repo</id>
+            <url>https://maven.inmeta.com/content/groups/public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>inmeta-repo</id>
+            <url>https://maven.inmeta.com/content/groups/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
